@@ -1,5 +1,5 @@
-const open = document.querySelector('.open')
-const close = document.querySelector('.close')
+const open = document.querySelector('.openBtn')
+const close = document.querySelector('.closeBtn')
 const menu = document.querySelector('.nav')
 const headline = document.querySelector('h1')
 

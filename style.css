@@ -172,10 +172,12 @@ ul {
 }
 
 li {
-  color: #fafafa;
   padding: 10px;
 }
-
+li a {
+  color: #e5fcc2;
+  text-decoration: none;
+}
 .nav ul > li {
   text-transform: uppercase;
   margin-left: 45%;
@@ -192,13 +194,19 @@ li {
   margin-left: 80%;
   transform: translateX(-200%);
 }
-
-li:hover,
-li:focus {
-  color: #cccbcb;
+.nav > ul > li + li + li + li {
+  margin-left: 100%;
+  transform: translateX(-250%);
 }
 
-.open {
+li a:hover,
+li a:focus {
+  color: #0cb5d3;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.7));
+  transform: scale(0.92);
+}
+
+.openBtn {
   position: fixed;
   bottom: 1rem;
   right: 22%;
@@ -219,7 +227,7 @@ li:focus {
   background-color: #fafafa;
 }
 
-.close {
+.closeBtn {
   position: fixed;
   right: 22%;
   bottom: 1rem;
@@ -291,8 +299,8 @@ li:focus {
     font-size: 1.2rem;
   }
 
-  .open,
-  .close {
+  .openBtn,
+  .closeBtn {
     position: fixed;
     right: 1rem;
     bottom: 1rem;
