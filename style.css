@@ -8,7 +8,7 @@
 
 html {
   height: 300%;
-  background: linear-gradient(180deg, #282828, #594f4f, #e5fcc2, #45ada8);
+  background: linear-gradient(180deg, #121212 30%, #594f4f, #e5fcc2, #45ada8);
 }
 
 body {
@@ -310,6 +310,8 @@ li a:focus {
     position: fixed;
     right: 1rem;
     z-index: 5;
+  }
+  .openBtn {
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
   }
   .wrapper1 > h2 {
