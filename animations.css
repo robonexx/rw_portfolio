@@ -1,0 +1,39 @@
+.has-scroll-reveal {
+    animation-play-state: paused;
+}
+
+.animated, .stop_animation {
+    animation-play-state: running;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.textSplit:nth-child(even) {color:#6D5B7F;}
+p > *{color:black!important;
+font-size:20px;}
+
+/* Slide Animations */
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+	    -webkit-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+}
+.altSlideInLeft:nth-child(odd) {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+	    -webkit-transform: translateX(100vw);
+    transform: translateX(100vw);
+}
+@keyframes slideInLeft {
+    from {
+}
+to {
+    -webkit-transform:  translateX(0);
+    transform: translateX(0);
+}}
+/* ---------------------- */

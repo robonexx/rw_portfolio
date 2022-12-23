@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,900;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
+@import url('./animations.css');
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +8,14 @@
 
 html {
   height: 300%;
-  background: linear-gradient(180deg, #121212 30%, #594f4f, #e5fcc2, #45ada8);
+  background: linear-gradient(180deg, #121212 30%, #594f4f, #e5fcc2, #b94a0ac5);
 }
 
 body {
   width: 100vw;
   overflow-x: hidden;
   transition: all 0.4s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -31,10 +32,44 @@ header {
   overflow: hidden;
 }
 
+
+.nav {
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 5vh;
+  background: #e3ffa8;
+  z-index: 100;
+}
+
+ul {
+  position: relative;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+
+}
+ul li {
+  list-style: none;
+  margin: 0 2rem;
+}
+
+ul li a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1a1b25;
+  font-weight: 400;
+  text-transform: uppercase;
+
+}
+
 .logo {
   position: fixed;
-  top: -20px;
-  left: 0;
+  top: 40px;
+  left: 20px;
   
   height: 180px;
   width: 180px;
@@ -42,7 +77,7 @@ header {
   transition-delay: 0.5s;
   transition: all 1s ease;
   perspective: 30em;
-  z-index: 2;
+  z-index: 5;
 }
 
 .card {
@@ -83,19 +118,24 @@ header {
 
 h1 {
   text-align: center;
-  font-size: 1rem;
-  color: #ff847c;
+  font-size: 32px;
+  color: #e3ffa8;
   z-index: 20;
-  font-family: "Krona One", sans-serif;
+}
+
+h2 {
+  width: 100%;
+  height: 200px;
+ font-size: clamp(2rem, 2.5vw, 3rem); 
 }
 
 .wrapper1 {
   position: absolute;
   top: 0vh;
   left: 50%;
-  padding: 5rem;
+  padding: 5rem 10rem;
   transform: translateX(-50%);
-  width: 90%;
+  width: 70%;
   height: 100%;
   background: #2a3638;
   display: flex;
@@ -108,24 +148,23 @@ h1 {
   width: 100%;
   margin-top: 4rem;
   text-align: center;
-  font-size: 1rem;
   z-index: 1;
-  color: #29a59f;
-  font-weight: 100;
+  color: #1b1b1b;
+  font-weight: 600;
   font-style: italic;
   text-transform: uppercase;
-  text-shadow: 2px -2px 5px rgba(0, 0, 0, 0.397), 0px 0px 10px rgba(0, 0, 0, 0.295);
+  text-shadow: 0px 2px 5px 20px rgba(0, 0, 0, 0.297), 0px 0px 20px 40px rgba(0, 0, 0, 0.495);
 }
 .wrapper1 > h2:before {
   content: "DEVELOPER";
   position: absolute;
-  top: 4%;
+  top: 6%;
   right: 10%;
   opacity: 0.6;
-  color: #282828c4;
+  color: #1f292b;
   font-weight: 600;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 50px;
   z-index: -1;
   text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.7);
 }
@@ -134,13 +173,13 @@ h1 {
   position: absolute;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  top: 10%;
+  top: 16%;
   right: 1%;
   opacity: 0.6;
-  color: #282828c4;
+  color: #1f292b;
   font-weight: 600;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 40px;
   z-index: -1;
   text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.7);
 }
@@ -156,7 +195,7 @@ h1 {
   text-align: justify;
 }
 .about > h2 {
-  font-size: 3rem;
+  
   font-weight: 900;
   color: #e5fcc2;
 }
@@ -167,8 +206,8 @@ h1 {
   top: 100vh;
   left: 50%;
   transform: translateX(-50%);
-  padding: 5rem;
-  width: 90%;
+  padding: 5rem 10rem;
+  width: 70%;
   height: 100%;
   background: #2a3638;
   display: flex;
@@ -180,8 +219,8 @@ h1 {
   top: 200vh;
   left: 50%;
   transform: translateX(-50%);
-  padding: 5rem;
-  width: 90%;
+  padding: 5rem 10rem;
+  width: 70%;
   height: 100%;
   background: #2a3638;
   display: flex;
@@ -189,7 +228,25 @@ h1 {
   align-items: center;
 }
 
+.hamburger {
+  display: none;
+}
 
+
+/* ========== HAMBURGER NAV BUTTON ====================== */
+ 
+@media screen and (max-width: 900px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo {
+    opacity: 0.3;
+    z-index: 1;
+  }
+  
+ 
 .nav {
   position: fixed;
   width: 100vw;
@@ -199,64 +256,50 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform: translateX(100%);
+  transform: translate(100%);
   transition: transform 0.6s ease-in-out;
-}
-
+} 
+ 
 ul {
   position: absolute;
-  left: 40%;
-  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
   top: 60%;
   list-style: none;
   font-size: 2rem;
   z-index: 3;
+  margin: 0;
 }
 
-li {
-  padding: 10px;
+ul li {
+  padding: 0.5rem;
+  text-align: center;
+  margin: 0;
 }
 li a {
   color: #e5fcc2;
   text-decoration: none;
 }
-.nav ul > li {
+ul > li {
   text-transform: uppercase;
-  margin-left: 45%;
+
   transform: translateX(-100%);
   transition-delay: 2s;
   transition: transform 0.4s ease-in;
 }
 
-.nav > ul > li + li {
-  margin-left: 65%;
-  transform: translateX(-150%);
-}
-.nav > ul > li + li + li {
-  margin-left: 80%;
-  transform: translateX(-200%);
-}
-.nav > ul > li + li + li + li {
-  margin-left: 100%;
-  transform: translateX(-250%);
-}
-
-li a:hover,
-li a:focus {
-  color: #0cb5d3;
+ul li:hover a,
+ul li:focus a {
+  color:  #c53227;
   filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.7));
   transform: scale(0.92);
-}
+} 
 
 /* ========== HAMBURGER NAV BUTTON ====================== */
-.hamburger {
+ .hamburger {
   display: block;
   position: fixed;
-  right: 0.5rem;
+  left: 0.5rem;
   top: 0.5rem;
   width: 46px;
   height: 32px;
@@ -314,74 +357,22 @@ li a:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
+} 
+
 }
-/* ========== HAMBURGER NAV BUTTON ====================== */
-/* 
-@media screen and (max-width: 900px) {
-  body {
-    width: 100vw;
-    overflow-x: hidden;
-  }
 
-  header {
-    width: 100vw;
-  }
-  .wrapper1,
-  .about,
-  .content {
-    max-width: 100vw;
-    width: 360px;
-    padding: 1rem;
-    overflow-x: hidden;
-    text-align: center;
-    background: transparent;
-  }
+.text_anim_1 {
 
-  .logo {
-    position: fixed;
-    top: 0;
-    left: 1rem;
-    background-image: url(./rob1.png);
-    background-repeat: no-repeat;
-    height: 15vh;
-    width: 15vh;
-  }
+}
 
-  h1 {
-    margin-top: 3vh;
-    font-size: 1.2rem;
-  }
+.text_anim_2 {
 
-  .hamburger {
-    position: fixed;
-    right: 1rem;
-    z-index: 5;
-  }
-  .openBtn {
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
-  }
-  .wrapper1 > h2 {
-    width: 100%;
-    margin-top: 4vh;
-    font-size: 1.2rem;
-    z-index: 1;
-    color: #45ada8;
-    font-weight: 100;
-    font-style: italic;
-  }
-  .wrapper1 > h2:before {
-    content: "Rob-One";
-    position: absolute;
-    top: 0;
-    left: 24%;
-    color: #282828c4;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 3rem;
-    z-index: -1;
-  }
+}
 
-  ul {
-    margin-top: 60%;
-  }
-} */
+.text_anim_3 {
+
+}
+
+.text_anim_4 {
+
+}

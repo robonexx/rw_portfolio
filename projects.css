@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease-in all;
+}
+
+.wrapper {
+   
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 100rem;
+    border-bottom-right-radius: 100rem;
+}
+
+.colorHeadline {
+    text-transform: uppercase;
+    font-size: 10rem;
+    text-align: center;
+    margin: 2rem auto;
+    margin-bottom: 4rem;
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.4);
+    color: limegreen;
+}
+
+.btn {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+    color: transparent;
+    margin-bottom: 2rem;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+  }
+  
+  h1 {
+    margin: 20rem 30rem;
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  .sectionZero {
+      background-color: rgb(215, 245, 93);
+      color: rgb(176, 141, 35);
+  }
+  
+  .sectionOne {
+    background-color: rgb(104, 48, 172);
+    color: rgb(113, 250, 105);
+  }
+
+  
+  .sectionTwo {
+    background-color: #90BEDE;
+    color: rgb(53, 101, 57);
+  }
+  
+  .sectionThree {
+    background-color: rgb(201, 165, 157);
+    color: rgb(166, 88, 119);
+  }
+  
+  .sectionFour {
+    background-color: rgb(248, 184, 48);
+    color: rgb(25, 118, 212);
+  }
+
+/* 
+
+colors
+ok matches
+ body  rgb(215, 245, 93)    ,rgb(104, 48, 172)  ,rgb(201, 165, 157) ,
+ text rgb(176, 141, 35)     ,rgb(113, 250, 105) ,rgb(166, 88, 119)  ,
+ wrapper rgb(53, 101, 57)    ,rgb(29, 214, 234)  , rgb(148, 138, 54) ,
+ button ?                   ,                   ,rgb(6, 144, 85)    ,
+
+
+*/
