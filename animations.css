@@ -33,7 +33,7 @@ font-size:20px;}
     from {
 }
 to {
-    -webkit-transform:  translateX(0);
-    transform: translateX(0);
+    -webkit-transform:  none;
+    transform: none;
 }}
 /* ---------------------- */

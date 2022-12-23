@@ -13,40 +13,46 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       entry.target.classList.toggle('animated', entry.isIntersecting);
+      console.log(
+        'this i classList from entry inside observer: ' + entry.target.classList
+      );
     });
   },
   {
     threshold: 1,
   }
 );
-
+/* 
 arr.forEach((a) => {
   let textLineArr = a.textContent.split(' ');
 
   console.log(textLineArr);
-  //      Set blank variable
+  
   let html = '';
-  //     Get the elements animation classes
+  
   let animation = a.classList;
   console.log(animation);
-  //    Our split function
+  
   for (i = 0; i < textLineArr.length; ++i) {
-    //   recreate element in html variable with split words, addign "parent" element's class, add animation delay. The new elements have to be divs and not spans to support animation
+   
     html.innerHTML +=
       " <div style='animation-delay:" +
       i * 200 +
       "ms; display:inline-block' class='" +
       animation +
       "'>" +
-      textLineArr[i].textContent +
+      textLineArr[i] +
       '</div>';
 
     console.log(html);
 
-    a.innerHTML = html;
-
-    console.log(a.textContent);
+    a.append(html);
   }
 
-  observer.observe(a);
+  console.log(a.textContent);
+}); */
+
+arr.forEach((arr) => {
+  console.log(arr.classList);
+  observer.observe(arr);
 });
