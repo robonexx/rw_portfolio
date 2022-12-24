@@ -1,3 +1,16 @@
+.animate {
+    animation-play-state: running;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stop {
+    animation-play-state: paused;
+}
+
 span.textSplit {
     color: aqua;
 }
@@ -11,10 +24,9 @@ span {
 
 /* Slide Animations */
 .slideInLeft {
-    -webkit-animation: slideInLeft 1s ease-in-out 0s 1 alternate both;
-    animation: slideInLeft 1s ease-in-out 0s 1 alternate both;
-    -webkit-transform: translateX(-100vw);
-    transform: translateX(-100vw);
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+	   
 }
 .slideInLeft:nth-child(odd) {
     -webkit-animation-name: slideInLeft;
@@ -26,11 +38,65 @@ span {
     from {
         -webkit-transform: translateX(-100vw);
         transform: translateX(-100vw);
-        opacity: 1;
 }
 to {
-    -webkit-transform: translate(0);
-   transform: translate(0);
-   opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
 }}
 /* ---------------------- */
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+@keyframes fadeInRight {
+    from {
+    opacity: 0;
+    -webkit-transform: translateX(2.5rem);
+    transform: translateX(2.5rem);
+}
+to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}}
+
+.fastExit:nth-child(2) {  
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+        -webkit-animation-name: fastExit;
+  animation-name: fastExit;
+    transform-origin:bottom;
+}
+@keyframes fastExit {
+   0% {
+
+}
+ 
+  25% {
+    transform:scale(1, .2)
+  }
+50% {
+transform:scale(1, .2) translatex(100vw);
+  opacity:1;
+  }
+ 
+  99% {transform:scale(1, 0) translatex(0);
+    opacity:0;}
+
+}
+
+.highlightText:nth-child(odd){  
+    -webkit-animation-name: hilight;
+animation-name: hilight;
+background: linear-gradient(to right, #ecdbd2 50%, transparent 50%);
+background-size: 200% 100%;
+background-position:right bottom;
+padding:0 10px;
+}
+@keyframes hilight{
+0% {
+}
+100% {background-position:left bottom;}
+
+}
