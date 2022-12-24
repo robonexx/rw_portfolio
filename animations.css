@@ -100,3 +100,36 @@ padding:0 10px;
 100% {background-position:left bottom;}
 
 }
+
+.grow {
+    transform: scale(1);
+    -webkit-animation-name: grow;
+    animation-name: grow;
+}
+.grow:nth-child(odd) {
+    color: rgb(228, 118, 213);
+}
+@keyframes grow {
+    from {
+        /* opacity: 0; */
+        transform: scale(0);
+    }
+    to {
+    transform: scale(1);
+    opacity: 1;
+}}
+
+.shrink {
+    
+    -webkit-animation-name: shrink;
+    animation-name: shrink;
+}
+@keyframes shrink {
+    from {
+    transform: scale(5);
+    opacity: 0;
+}
+to {
+    transform: scale(1);
+    opacity: 1;
+}}
