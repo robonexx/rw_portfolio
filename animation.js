@@ -1,6 +1,6 @@
 let arr = Array.from(document.querySelectorAll('.textSplit'));
 
-console.log('array of texts: ' + arr);
+/* console.log('array of texts: ' + arr); */
 /* 
 let winHeight = window.innerHeight;
 
@@ -9,15 +9,23 @@ window.addEventListener('resize', function () {
 }); */
 
 const observer = new IntersectionObserver(
-  (entries, cls) => {
+  (entries) => {
     entries.forEach((entry) => {
-      entry.target.classList.toggle('slideInLeft', entry.isIntersecting);
+      for (const child of entry.target.children) {
+        if (entry.isIntersecting) {
+          console.log('child elem tag: ' + child.classList);
+          child.classList.add('slideInLeft');
+
+          /* entry.target.classList.add('slideInLeft'); */
+        } else {
+          child.classList.remove('slideInLeft');
+          entry.target.style.transform = '-100vw';
+        }
+      }
       if (entry.isIntersecting) {
         observer.unobserve(entry.target);
+      } else {
       }
-      console.log(
-        'this i classList from entry inside observer: ' + entry.target.classList
-      );
     });
   },
   {
@@ -50,7 +58,7 @@ arr.forEach((a) => {
 
     a.innerHTML = html;
 
-    a.parentElement.classList.remove();
+    a.classList.remove('textSplit');
   }
 
   console.log(a.textContent);

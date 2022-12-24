@@ -1,13 +1,13 @@
-.textSplit {
+span.textSplit {
     color: aqua;
 }
 
-.textSplit:nth-child(even) {
+span:nth-child(even) {
     color:#6D5B7F;
 }
-span > *{color:aqua!important;
-    
-font-size:20px;}
+span {
+    color:aqua
+}
 
 /* Slide Animations */
 .slideInLeft {
