@@ -1,29 +1,22 @@
-.has-scroll-reveal {
-    animation-play-state: paused;
+.textSplit {
+    color: aqua;
 }
 
-.animated, .stop_animation {
-    animation-play-state: running;
+.textSplit:nth-child(even) {
+    color:#6D5B7F;
 }
-.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-.textSplit:nth-child(even) {color:#6D5B7F;}
-p > *{color:black!important;
+span > *{color:aqua!important;
+    
 font-size:20px;}
 
 /* Slide Animations */
 .slideInLeft {
-    -webkit-animation-name: slideInLeft;
-    animation-name: slideInLeft;
-	    -webkit-transform: translateX(-100vw);
+    -webkit-animation: slideInLeft 1s ease-in-out 0s 1 alternate both;
+    animation: slideInLeft 1s ease-in-out 0s 1 alternate both;
+    -webkit-transform: translateX(-100vw);
     transform: translateX(-100vw);
 }
-.altSlideInLeft:nth-child(odd) {
+.slideInLeft:nth-child(odd) {
     -webkit-animation-name: slideInLeft;
     animation-name: slideInLeft;
 	    -webkit-transform: translateX(100vw);
@@ -31,9 +24,13 @@ font-size:20px;}
 }
 @keyframes slideInLeft {
     from {
+        -webkit-transform: translateX(-100vw);
+        transform: translateX(-100vw);
+        opacity: 1;
 }
 to {
-    -webkit-transform:  none;
-    transform: none;
+    -webkit-transform: translate(0);
+   transform: translate(0);
+   opacity: 1;
 }}
 /* ---------------------- */

@@ -126,7 +126,13 @@ h1 {
 h2 {
   width: 100%;
   height: 200px;
- font-size: clamp(2rem, 2.5vw, 3rem); 
+  font-size: clamp(3rem, 3.5vw, 4.5rem); 
+}
+
+section {
+  margin: 0 auto;
+  height: 100vh;
+  width: 60%;
 }
 
 .wrapper1 {
@@ -144,17 +150,7 @@ h2 {
   font-family: "Prompt", sans-serif;
 }
 
-.wrapper1 > h2 {
-  width: 100%;
-  margin-top: 4rem;
-  text-align: center;
-  z-index: 1;
-  color: #1b1b1b;
-  font-weight: 600;
-  font-style: italic;
-  text-transform: uppercase;
-  text-shadow: 0px 2px 5px 20px rgba(0, 0, 0, 0.297), 0px 0px 20px 40px rgba(0, 0, 0, 0.495);
-}
+
 .wrapper1 > h2:before {
   content: "DEVELOPER";
   position: absolute;
