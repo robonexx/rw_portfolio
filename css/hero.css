@@ -9,17 +9,15 @@
     border-top: 1px solid #888;
     border-bottom: 1px solid #888;
     background: linear-gradient(120deg, rgb(20, 20, 20), #0f0f0f, #020101, #1b1b1b, #000000);
+    overflow: hidden;
 }
 
 .hero > .container {
-    position: absolute;
+    position: relative;
     margin: 100px auto 0;
     padding: 2rem 0;
-    width: 50%;
+    width: 80%;
     height: 400px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
   }
   
   .hero .container > h2.text_top {
