@@ -1,0 +1,74 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: grid;
+    place-content: center;
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+    background: linear-gradient(120deg, rgb(20, 20, 20), #0f0f0f, #020101, #1b1b1b, #000000);
+}
+
+.hero > .container {
+    position: relative;
+    padding: 2rem 4rem 2rem 4rem;
+    min-width: 360px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero .container > .text-top {
+    font-family: Kenoky;
+    font-size: clamp(3rem, 10vw, 4rem); 
+    letter-spacing: 2px;
+    background: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #ffffff, #000000);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-text-fill-color: transparent;
+      font-weight: 800;
+      text-transform: uppercase;
+      transition: transform 1s ease;
+  }
+  
+  .hero > .container > .text {
+    position: absolute;
+    margin-top: 300px;
+    font-family: 'Montserrat';
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    padding: 2rem 0 0 4rem;
+    font-weight: 100;
+  }
+  
+  .text {
+    display: none;
+    animation: text-animation;
+    animation-direction: alternate;
+  }
+  
+  @keyframes text-animation {
+    0% {
+      filter: blur(5px);
+      opacity: 0.3;
+    }
+    20% {
+      filter: blur(0);
+      opacity: 1;
+    }
+    80% {
+      filter: blur(0);
+      opacity: 1;
+    }
+    100% {
+      filter: blur(20px);
+      opacity: 0.3;
+    }
+  }

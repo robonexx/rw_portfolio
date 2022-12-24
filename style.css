@@ -1,117 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
 @import url('./animations.css');
+@import url('./css/colors.css');
+@import url('./css/typography.css');
+@import url('./css/logo.css');
+@import url('./css/header.css');
+@import url('./css/nav.css');
+@import url('./css/hero.css');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  height: 300%;
+
+/* html {
   background: linear-gradient(180deg, #121212 30%, #594f4f, #e5fcc2, #b94a0ac5);
-}
+} */
 
 body {
-  width: 100vw;
-  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
   transition: all 0.4s ease-in-out;
   font-family: 'Montserrat', sans-serif;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 5vh;
-  background: #121212;
-  z-index: 1;
-  overflow: hidden;
-}
-
-
-.nav {
-  position: sticky;
-  display: flex;
-  justify-content: flex-end;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 6vh;
-  background: #e3ffa8;
-  z-index: 100;
-}
-
-ul {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-ul li {
-  list-style: none;
-  margin: 0 2rem;
-  
-}
-
-ul li a {
-  text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  color: #1a1b25;
-  font-weight: 400;
-  text-transform: uppercase;
-
-}
-
-.logo {
-  position: fixed;
-  top: 40px;
-  left: 20px;
-  
-  height: 180px;
-  width: 180px;
-  
-  transition-delay: 0.5s;
-  transition: all 1s ease;
-  perspective: 30em;
-  z-index: 5;
-}
-
-.card {
-  width:100%;
-  height:100%;
-  position:relative;
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-}
-
-.face {
-  width:100%;
-  height:100%;
-  
-  color:#FFF;
-  line-height:15em;
-  text-align:center;
-  position:absolute;
-  
-  backface-visibility:hidden;
-}
-
-.front {
-  background-image: url(./rob1.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.back {
-  background-image: url(./rob2.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  transform: rotateY(180deg);
-}
-.logo:hover .card {
-  transform: rotateY(180deg);
+  overflow-x: hidden;
 }
 
 h1 {
@@ -123,24 +34,27 @@ h1 {
 
 h2 {
   width: 100%;
-  height: 200px;
   font-size: clamp(3rem, 3.5vw, 4.5rem); 
 }
 
 section {
     margin: 0 auto;
     padding:0 5%;
-    height: calc(100vh - 60px);
+    height: 100vh;
     width: 60%;
     display:flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     border: 20px solid rgb(80, 104, 110);
+    background: linear-gradient(to left, rgb(41, 41, 41), #242424da, #1d1d1db2, #222222, #000000);
+    background-repeat: no-repeat;
 }
 
   .section:nth-child(even) {
-    background-color:rgb(241,115,127);
+    background: linear-gradient(120deg, rgb(20, 20, 20), #0f0f0f, #020101, #1b1b1b, #000000);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 
@@ -186,7 +100,6 @@ p:nth-child(odd) {
   color: pink;
 }
 .about > h2 {
-  
   font-weight: 900;
   color: #e5fcc2;
 }
@@ -199,76 +112,17 @@ p:nth-child(odd) {
 
 /* ========== HAMBURGER NAV BUTTON ====================== */
  
-@media screen and (max-width: 900px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
-  .logo {
-    opacity: 0.3;
-    z-index: 1;
-  }
-  
- 
-.nav {
-  position: fixed;
-  width: 100vw;
-  min-height: 100vh;
-  background-color: #ff847c;
-  background-image: url(./rob.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 2;
-  transform: translate(100%);
-  transition: transform 0.6s ease-in-out;
-} 
- 
-ul {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 60%;
-  list-style: none;
-  font-size: 2rem;
-  z-index: 3;
-  margin: 0;
-}
-
-ul li {
-  padding: 0.5rem;
-  text-align: center;
-  margin: 0;
-}
-ul li a {
-  color: #e5fcc2;
-  text-decoration: none;
-}
-ul > li {
-  text-transform: uppercase;
-
-  transform: translateX(-100%);
-  transition-delay: 2s;
-  transition: transform 0.4s ease-in;
-}
-
-ul li:hover a,
-ul li:focus a {
-  color:  #c53227;
-  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.7));
-  transform: scale(0.92);
-} 
 
 /* ========== HAMBURGER NAV BUTTON ====================== */
  .hamburger {
   display: block;
   position: fixed;
-  left: 0.5rem;
-  top: 0.5rem;
+  right: 1rem;
+  top: 120px;
   width: 46px;
   height: 32px;
   transform: all 1s ease-in-out;
-  z-index: 5;
+  z-index: 1000;
 }
 
 .openBtn {
@@ -323,4 +177,8 @@ ul li:focus a {
   transform: translate(-50%, -50%) rotate(-45deg);
 } 
 
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+}
 }
