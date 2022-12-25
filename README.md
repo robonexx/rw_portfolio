@@ -1,6 +1,8 @@
 ﻿# my portfolio
 # HTML CSS VANILLA JS
 
+(this project is a pure html, css vanilla js / jquery project, i start with mobile first so if it looks strange I havent worked on desktop yet, i will change this many times, so check back later if it looks awefull)
+
 So I will redo and continue with this one, started a while ago
 Done many other projects, learned alot using scss, react, next.js, wordpress, headless cms, less, styled components, little vue etc
 

@@ -14,7 +14,7 @@
 .textSplit {
     
 }
-
+span,
 span.textSplit {
     color: rgb(177, 177, 177);
     font-weight: 700;
@@ -22,10 +22,6 @@ span.textSplit {
 
 span:nth-child(even) {
     color:#5f5f5f;
-}
-span {
-    color:rgb(68, 68, 68); 
-    font-weight: 700;
 }
 
 /* Slide Animations */
@@ -95,7 +91,7 @@ transform:scale(1, .2) translatex(100vw);
 .highlightText:nth-child(odd){  
     -webkit-animation-name: hilight;
 animation-name: hilight;
-background: linear-gradient(to right, #c7c7c7 50%, transparent 50%);
+background: linear-gradient(to right, #575757 50%, transparent 50%);
 background-size: 200% 100%;
 background-position:right bottom;
 padding:0 10px;

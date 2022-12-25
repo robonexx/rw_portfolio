@@ -4,6 +4,10 @@ const wrapper = document.querySelector('.wrapper');
 const body = document.querySelector('body');
 
 btn.addEventListener('click', () => {
+
+  // random color generator
+  // choosing a n umber between 0.255
+  // no shades yet
   let randomColor = () => {
     return Math.floor(Math.random() * 255) + 1;
   };
@@ -28,15 +32,20 @@ const colors = [
   'sectionFour',
 ];
 
+
+// creating array from sections
 const sections = [...document.getElementsByTagName('section')];
 
+// scroll event
 window.addEventListener('scroll', function () {
   document.body.style = '';
+/* 
+  const colorScroll = document.getElementsByClassName('colorScroll'); */
 
-  const colorScroll = document.getElementsByClassName('colorScroll');
-
+  // page Y-axis off sett 
   const scrollFromTop = window.pageYOffset;
 
+  // looping thru the sections and checking offset to top
   for (let i = 0; sections.length > i; i++) {
     if (scrollFromTop <= sections[i].offsetTop) {
       document.body.className = colors[i];
@@ -45,6 +54,8 @@ window.addEventListener('scroll', function () {
   }
 });
 
+
+// keeping
 /* 
 btn.addEventListener('click', () => {
 let randomColor = () => {
